@@ -13,7 +13,6 @@ public interface PatientRepository extends JpaRepository<Patient, UUID> {
     boolean existsByEmail(String email);
     boolean existsByEmailAndIdNot(String email,UUID id);
     boolean existsById(UUID id);
-
-
+    boolean existsByNotEmail(String email);
 
 }
