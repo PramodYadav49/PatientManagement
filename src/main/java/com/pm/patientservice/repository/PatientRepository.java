@@ -4,6 +4,7 @@ import com.pm.patientservice.model.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -14,5 +15,7 @@ public interface PatientRepository extends JpaRepository<Patient, UUID> {
     boolean existsByEmailAndIdNot(String email,UUID id);
     boolean existsById(UUID id);
     boolean existsByNotEmail(String email);
+    boolean existbyName(String name);
+    List<Patient> findbyAddress();
 
 }
