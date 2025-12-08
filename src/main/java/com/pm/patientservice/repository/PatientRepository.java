@@ -17,5 +17,5 @@ public interface PatientRepository extends JpaRepository<Patient, UUID> {
     boolean existsByNotEmail(String email);
     boolean existbyName(String name);
     List<Patient> findbyAddress();
-
+    List<Patient> findByEmail();
 }
