@@ -1,0 +1,23 @@
+From 3c02d50781dcf5859e4faa2f79761015b6fff66f Mon Sep 17 00:00:00 2001
+From: pramod yadav <indrashyadav8@gmail.com>
+Date: Mon, 8 Dec 2025 13:14:25 +0530
+Subject: [PATCH] update PatientRepository
+
+---
+ .../com/pm/patientservice/repository/PatientRepository.java     | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main/java/com/pm/patientservice/repository/PatientRepository.java b/src/main/java/com/pm/patientservice/repository/PatientRepository.java
+index 0b5df99..0091284 100644
+--- a/src/main/java/com/pm/patientservice/repository/PatientRepository.java
++++ b/src/main/java/com/pm/patientservice/repository/PatientRepository.java
+@@ -14,5 +14,5 @@ public interface PatientRepository extends JpaRepository<Patient, UUID> {
+     boolean existsByEmailAndIdNot(String email,UUID id);
+     boolean existsById(UUID id);
+     boolean existsByNotEmail(String email);
+-    boolean findByName();
++
+ }
+-- 
+2.52.0.windows.1
+
